@@ -20,33 +20,43 @@
 
 package main
 
-import "sort"
+import (
+	"reflect"
+	"testing"
+)
 
-func kClosest(points [][]int, K int) [][]int {
-	N := len(points)
-	dists := make([]int, N)
-
-	for i := 0; i < N; i++ {
-		dists[i] = dist(points[i])
+func Test_kClosest(t *testing.T) {
+	type args struct {
+		points [][]int
+		K      int
 	}
-	sort.Ints(dists)
-	disK := dists[K-1]
-
-	a, j := make([][]int, K), 0
-	for i := range a {
-		a[i] = make([]int, 2)
+	tests := []struct {
+		name string
+		args args
+		want [][]int
+	}{
+		{
+			name: "case 1",
+			args: args{
+				points: [][]int{{1, 3}, {-2, 2}},
+				K:      1,
+			},
+			want: [][]int{{-2, 2}},
+		},
+		{
+			name: "case 2",
+			args: args{
+				points: [][]int{{3, 3}, {5, -1}, {-2, 4}},
+				K:      2,
+			},
+			want: [][]int{{3, 3}, {-2, 4}},
+		},
 	}
-	for i := 0; i < N; i++ {
-		if dist(points[i]) <= disK {
-			a[j] = points[i]
-			j++
-		}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := kClosest(tt.args.points, tt.args.K); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("kClosest() = %v, want %v", got, tt.want)
+			}
+		})
 	}
-
-	return a
-
-}
-
-func dist(p []int) int {
-	return p[0]*p[0] + p[1]*p[1]
 }
