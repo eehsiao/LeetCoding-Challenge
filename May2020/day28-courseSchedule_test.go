@@ -25,67 +25,40 @@
 
 package main
 
-type gNode struct {
-	inDegrees int
-	outNodes  []int
-}
+import "testing"
 
-func canFinish(numCourses int, prerequisites [][]int) bool {
-	var (
-		ttlDeps, edge int   = len(prerequisites), 0
-		nodepCourses  []int = make([]int, 0)
-	)
-	if ttlDeps == 0 {
-		return true
+func Test_canFinish(t *testing.T) {
+	type args struct {
+		numCourses    int
+		prerequisites [][]int
 	}
-
-	graph := make(map[int]*gNode, 0)
-
-	for _, r := range prerequisites {
-		p := createGNode(graph, r[1])
-		n := createGNode(graph, r[0])
-		p.outNodes = append(p.outNodes, r[0])
-		n.inDegrees++
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		{
+			name: "case 1",
+			args: args{
+				numCourses:    2,
+				prerequisites: [][]int{{1, 0}},
+			},
+			want: true,
+		},
+		{
+			name: "case 2",
+			args: args{
+				numCourses:    2,
+				prerequisites: [][]int{{1, 0}, {0, 1}},
+			},
+			want: false,
+		},
 	}
-
-	for v, m := range graph {
-		if m.inDegrees == 0 {
-			nodepCourses = append(nodepCourses, v)
-		}
-	}
-	for len(nodepCourses) > 0 {
-		n := len(nodepCourses) - 1
-		course := nodepCourses[n]
-		nodepCourses = nodepCourses[:n] // pop
-
-		for _, next := range graph[course].outNodes {
-			child := graph[next]
-			child.inDegrees--
-			edge++
-			if child.inDegrees == 0 {
-				nodepCourses = append(nodepCourses, next)
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := canFinish(tt.args.numCourses, tt.args.prerequisites); got != tt.want {
+				t.Errorf("canFinish() = %v, want %v", got, tt.want)
 			}
-		}
+		})
 	}
-
-	for edge != ttlDeps {
-		return false
-	}
-
-	return true
-}
-
-func createGNode(g map[int]*gNode, c int) *gNode {
-	var node *gNode = nil
-	if n, ok := g[c]; ok {
-		node = n
-	} else {
-		node = &gNode{
-			inDegrees: 0,
-			outNodes:  make([]int, 0),
-		}
-		g[c] = node
-	}
-
-	return node
 }
