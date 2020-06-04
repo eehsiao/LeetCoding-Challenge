@@ -68,3 +68,21 @@ Note:
 It is guaranteed that costs.length is even.
 1 <= costs[i][0], costs[i][1] <= 1000
 ```
+
+### Day4 : Reverse String
+
+###  [Reverse String](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day4-reverseString.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day4-reverseString_test.go)
+```
+Write a function that reverses a string. The input string is given as an array of characters char[].
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+You may assume all the characters consist of printable ascii characters.
+Example 1:
+Input: ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+Example 2:
+Input: ["H","a","n","n","a","h"]
+Output: ["h","a","n","n","a","H"]
+   Hide Hint #1
+The entire logic for reversing a string is based on using the opposite directional two-pointer approach!
+
+```
