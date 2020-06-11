@@ -157,7 +157,7 @@ the number of coins is less than 500
 the answer is guaranteed to fit into signed 32-bit integer
 ```
 
-### Day7 : Power of Two
+### Day8 : Power of Two
 
 ###  [Power of Two](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day8-powerofTwo.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day8-powerofTwo_test.go)
 ```
