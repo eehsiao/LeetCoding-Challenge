@@ -157,6 +157,24 @@ the number of coins is less than 500
 the answer is guaranteed to fit into signed 32-bit integer
 ```
 
+### Day7 : Power of Two
+
+###  [Power of Two](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day8-powerofTwo.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day8-powerofTwo_test.go)
+```
+Given an integer, write a function to determine if it is a power of two.
+Example 1:
+Input: 1
+Output: true
+Explanation: 20 = 1
+Example 2:
+Input: 16
+Output: true
+Explanation: 24 = 16
+Example 3:
+Input: 218
+Output: false
+```
+
 ### Day10 : Search Insert Position
 
 ###  [Search Insert Position](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day10-searchInsertPosition.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day10-searchInsertPosition_test.go)
