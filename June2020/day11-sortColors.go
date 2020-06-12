@@ -28,3 +28,60 @@ func sortColors(nums []int) {
 	}
 
 }
+
+func sortColors_wrong(nums []int) {
+	red, blue, i := 0, len(nums)-1, 0
+
+	for i = 0; i < len(nums)/2; i++ {
+		if nums[i] == 2 {
+			blue--
+			nums[i], nums[blue] = nums[blue], nums[i]
+			if nums[i] == 0 && i != red {
+				red++
+				nums[i], nums[red] = nums[red], nums[i]
+			}
+		} else if nums[i] == 0 {
+			red++
+			nums[i], nums[red] = nums[red], nums[i]
+			if nums[i] == 2 && i != blue {
+				blue--
+				nums[i], nums[blue] = nums[blue], nums[i]
+			}
+		}
+
+		if nums[len(nums)-1-i] == 0 {
+			red++
+			nums[len(nums)-1-i], nums[red] = nums[red], nums[len(nums)-1-i]
+			if nums[len(nums)-1-i] == 2 {
+				blue--
+				nums[len(nums)-1-i], nums[blue] = nums[blue], nums[len(nums)-1-i]
+			}
+		} else if nums[len(nums)-1-i] == 0 {
+			blue--
+			nums[len(nums)-1-i], nums[blue] = nums[blue], nums[len(nums)-1-i]
+			if nums[len(nums)-1-i] == 2 {
+				red++
+				nums[len(nums)-1-i], nums[red] = nums[red], nums[len(nums)-1-i]
+			}
+		}
+		// fmt.Println(nums, red, blue)
+	}
+	if len(nums)/2*2 != len(nums) {
+		if nums[i] == 2 && i < blue {
+			blue--
+			nums[i], nums[blue] = nums[blue], nums[i]
+		} else if nums[i] == 0 && i > red {
+			red++
+			nums[i], nums[red] = nums[red], nums[i]
+		} else if nums[i] == 1 {
+			if red == -1 && nums[i] < nums[red+1] {
+				red++
+				nums[i], nums[red] = nums[red], nums[i]
+			} else if blue == len(nums) && nums[i] > nums[blue-1] {
+				blue--
+				nums[i], nums[blue] = nums[blue], nums[i]
+			}
+		}
+		// fmt.Println(nums, red, blue)
+	}
+}
