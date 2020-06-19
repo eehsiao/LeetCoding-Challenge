@@ -406,9 +406,9 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on the
 ```
 
 
-### Day18 : Validate IP Address
+### Day18 : H-Index II
 
-###  [Validate IP Address](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day18-h-IndexII.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day18-h-IndexII_test.go)
+###  [H-Index II](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day18-h-IndexII.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day18-h-IndexII_test.go)
 ```
 Given an array of citations sorted in ascending order (each citation is a non-negative integer) of a researcher, write a function to compute the researcher's h-index.
 According to the definition of h-index on Wikipedia: "A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each."
