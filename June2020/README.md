@@ -531,6 +531,25 @@ Output: 6
 ```
 
 
+### Day24 : Unique Binary Search Trees
+
+###  [Unique Binary Search Trees](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day24-uniqueBinarySearchTrees.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day24-uniqueBinarySearchTrees_test.go)
+```
+Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
+Example:
+Input: 3
+Output: 5
+Explanation:
+Given n = 3, there are a total of 5 unique BST's:
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+```
+
+
+
 ### Day29 : Unique Paths
 
 ###  [Unique Paths](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day29-uniquePaths.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day29-uniquePaths_test.go)
