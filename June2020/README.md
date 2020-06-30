@@ -602,6 +602,21 @@ Therefore, sum = 495 + 491 + 40 = 1026.
 ```
 
 
+### Day27 : Perfect Squares
+
+###  [Perfect Squares](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day27-perfectSquares.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/June2020/day27-perfectSquares_test.go)
+```
+Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1:
+Input: n = 12
+Output: 3
+Explanation: 12 = 4 + 4 + 4.
+Example 2:
+Input: n = 13
+Output: 2
+Explanation: 13 = 4 + 9.
+```
+
 
 ### Day29 : Unique Paths
 
