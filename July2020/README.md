@@ -50,6 +50,25 @@ return its bottom-up level order traversal as:
 ```
 
 
+### Day5 : Hamming Distance
+
+###  [Hamming Distance](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/July2020/day5-hammingDistance.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/July2020/day5-hammingDistance_test.go)
+```
+The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
+Given two integers x and y, calculate the Hamming distance.
+Note:
+0 ≤ x, y < 231.
+Example:
+Input: x = 1, y = 4
+Output: 2
+Explanation:
+1   (0 0 0 1)
+4   (0 1 0 0)
+       ↑   ↑
+The above arrows point to positions where the corresponding bits are different.
+```
+
+
 ### Day6 : Plus One
 
 ###  [Plus One](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/July2020/day6-plusOne.go) [(Test Case)](https://github.com/eehsiao/LeetCoding-Challenge/blob/master/July2020/day6-plusOne_test.go)
